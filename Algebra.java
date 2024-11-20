@@ -22,6 +22,10 @@ public class Algebra {
 		System.out.println(sqrt(36));
 		System.out.println(sqrt(263169));
 		System.out.println(sqrt(76123));
+
+		for (int i = 0; i <= 100; i++) {
+			System.out.printf("i %d: correct=%d mine=%d\n", i, (int) Math.sqrt(i), sqrt(i));
+		}
 	}
 
 	// Returns x1 + x2
@@ -113,7 +117,7 @@ public class Algebra {
 	// Returns the integer part of sqrt(x)
 	public static int sqrt(int x) {
 		int i = 0;
-		while (pow(i, 2) < x) {
+		while (pow(i,2) < x && pow(i+1,2) <= x) {
 			i++;
 		}
 		return i;
