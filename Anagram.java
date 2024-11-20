@@ -47,7 +47,7 @@ public class Anagram {
 	// which are left
 	// as is. For example, the string "What? No way!" becomes "whatnoway"
 	public static String preProcess(String str) {
-		String abc = "abcdefghijklmnopqrstuvwxyz";
+		String abc = "abcdefghijklmnopqrstuvwxyz ";
 		String newStr = "";
 		str = str.toLowerCase();
 		for (int i = 0; i < str.length(); i++) {
@@ -67,7 +67,7 @@ public class Anagram {
 			int i = (int) (Math.random() * str.length());
 			String c = str.substring(i, i+1);
 			newStr += c;
-			str = str.replace(c, "");
+			str = str.replaceFirst(c, "");
 		}
 		return newStr;
 	}
